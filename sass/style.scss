@@ -1,0 +1,40 @@
+@import "libs/normalize.scss";
+@import "libs/border-box.scss";
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+
+    margin-bottom: 25px;
+
+    background: linear-gradient(to right, #e39f5f, #df7b61, #cf5b6c, #b0447b, #803a87);
+
+    border-radius: 0 0 10px 10px;
+
+    & p {
+        margin: 0;
+
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+
+    margin-top: 25px;
+
+    background: linear-gradient(to right, #e39f5f, #df7b61, #cf5b6c, #b0447b, #803a87);
+
+    border-radius: 10px 10px 0 0;
+
+    & p {
+        margin: 0;
+
+    }
+}
