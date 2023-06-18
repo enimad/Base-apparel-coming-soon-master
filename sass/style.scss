@@ -1,5 +1,12 @@
 @import "libs/normalize.scss";
 @import "libs/border-box.scss";
+@import "libs/colors.scss";
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+
+    background-color: $background-color;
+}
 
 header {
     display: flex;
@@ -36,5 +43,115 @@ footer {
     & p {
         margin: 0;
 
+    }
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+
+    margin: 10px 0 30px 30px;
+}
+
+.brand-img_mobile {
+    width: 100%;
+}
+
+.content {
+    &-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-title {
+        margin-bottom: 0;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        font-size: 40px;
+        font-weight: 600;
+
+        letter-spacing: 9px;
+
+        color: $black-text;
+
+        & span {
+            font-weight: 300;
+
+            color: $pink-text;
+        }
+    }
+
+    &-message {
+        margin: 20px 0 25px 0;
+
+        width: 80%;
+
+        line-height: 1.5;
+
+        text-align: center;
+        font-size: 14px;
+
+        color: $pink-text;
+    }
+}
+
+.email-box {
+    width: 80%;
+}
+
+.form-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0 25px;
+    border: solid 2px hsl(0, 36%, 70%, 0.5);
+    height: 50px;
+    border-radius: 25px;
+
+    & input {
+        border: none;
+        outline: none;
+
+        color: $black-text;
+        background-color: $background-color;
+
+        font-size: 14px;
+
+        margin-left: 20px;
+
+    }
+
+    ::placeholder {
+        color: $pink-text;
+        opacity: 0.5;
+    }
+
+    & button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+
+        width: 70px;
+        height: 50px;
+
+        border: none;
+        border-radius: 25px;
+
+        margin-right: -3px;
+
+        background: $btn;
+
+        transition: 0.6s ease;
+
+        &:hover {
+            background: $btn-hover;
+
+            box-shadow: 0px 6px 20px 0px $pink-text;
+        }
     }
 }
