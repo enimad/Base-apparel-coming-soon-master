@@ -350,6 +350,10 @@ html {
 body {
   font-family: "Josefin Sans", sans-serif;
   background-color: #fff5f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 header {
@@ -378,20 +382,69 @@ footer p {
   margin: 0;
 }
 
+@media (min-width: 1440px) {
+  main {
+    display: flex;
+  }
+}
+
 .logo {
   width: 100px;
   height: auto;
   margin: 10px 0 30px 30px;
 }
+@media (min-width: 700px) {
+  .logo {
+    width: 315px;
+    margin: 55px 0;
+  }
+}
+@media (min-width: 1440px) {
+  .logo {
+    width: 150px;
+    margin: 0 0 50px 0;
+  }
+}
 
 .brand-img_mobile {
   width: 100%;
 }
+@media (min-width: 700px) {
+  .brand-img_mobile {
+    display: none;
+  }
+}
+.brand-img_desktop {
+  display: none;
+}
+@media (min-width: 1440px) {
+  .brand-img_desktop {
+    display: unset;
+  }
+}
 
+@media (min-width: 700px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 1440px) {
+  .content {
+    padding: 65px 165px 65px 211px;
+    align-items: unset;
+  }
+}
 .content-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 1440px) {
+  .content-section {
+    align-items: flex-start;
+  }
 }
 .content-title {
   margin-bottom: 0;
@@ -401,6 +454,13 @@ footer p {
   font-weight: 600;
   letter-spacing: 9px;
   color: #413a3a;
+}
+@media (min-width: 1440px) {
+  .content-title {
+    text-align: start;
+    font-size: 75px;
+    letter-spacing: 20px;
+  }
 }
 .content-title span {
   font-weight: 300;
@@ -414,9 +474,21 @@ footer p {
   font-size: 14px;
   color: #ce9797;
 }
+@media (min-width: 1440px) {
+  .content-message {
+    text-align: start;
+    font-size: 18px;
+    width: 100%;
+  }
+}
 
 .email-box {
   width: 80%;
+}
+@media (min-width: 1440px) {
+  .email-box {
+    width: 100%;
+  }
 }
 
 .form-box {
@@ -431,10 +503,16 @@ footer p {
 .form-box input {
   border: none;
   outline: none;
+  height: 100%;
   color: #413a3a;
   background-color: #fff5f5;
   font-size: 14px;
   margin-left: 20px;
+}
+@media (min-width: 1440px) {
+  .form-box input {
+    font-size: 18px;
+  }
 }
 .form-box ::placeholder {
   color: #ce9797;
@@ -456,6 +534,11 @@ footer p {
 .form-box button:hover {
   background: linear-gradient(135deg, #ffe6e6, #ffc7c7);
   box-shadow: 0px 6px 20px 0px #ce9797;
+}
+@media (min-width: 1440px) {
+  .form-box button {
+    width: 90px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

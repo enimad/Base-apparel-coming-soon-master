@@ -1,11 +1,17 @@
 @import "libs/normalize.scss";
 @import "libs/border-box.scss";
 @import "libs/colors.scss";
+@import "libs/media.scss";
 
 body {
     font-family: 'Josefin Sans', sans-serif;
 
     background-color: $background-color;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
 }
 
 header {
@@ -46,22 +52,72 @@ footer {
     }
 }
 
+main {
+    @include media("large") {
+        display: flex;
+    }
+}
+
 .logo {
     width: 100px;
     height: auto;
 
     margin: 10px 0 30px 30px;
+
+    @include media("small") {
+        width: 315px;
+
+        margin: 55px 0;
+    }
+
+    @include media("large") {
+        width: 150px;
+
+        margin: 0 0 50px 0;
+    }
 }
 
-.brand-img_mobile {
-    width: 100%;
+.brand-img {
+    &_mobile {
+        width: 100%;
+
+        @include media("small") {
+            display: none;
+        }
+    }
+
+    &_desktop {
+        display: none;
+
+        @include media("large") {
+            display: unset;
+        }
+    }
 }
 
 .content {
+
+    @include media("small") {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    @include media("large") {
+        padding: 65px 165px 65px 211px;
+
+        align-items: unset;
+    }
+
     &-section {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include media("large") {
+            align-items: flex-start;
+        }
     }
 
     &-title {
@@ -76,6 +132,12 @@ footer {
         letter-spacing: 9px;
 
         color: $black-text;
+
+        @include media("large") {
+            text-align: start;
+            font-size: 75px;
+            letter-spacing: 20px;
+        }
 
         & span {
             font-weight: 300;
@@ -95,11 +157,21 @@ footer {
         font-size: 14px;
 
         color: $pink-text;
+
+        @include media("large") {
+            text-align: start;
+            font-size: 18px;
+            width: 100%;
+        }
     }
 }
 
 .email-box {
     width: 80%;
+
+    @include media("large") {
+        width: 100%;
+    }
 }
 
 .form-box {
@@ -115,6 +187,8 @@ footer {
         border: none;
         outline: none;
 
+        height: 100%;
+
         color: $black-text;
         background-color: $background-color;
 
@@ -122,6 +196,9 @@ footer {
 
         margin-left: 20px;
 
+        @include media("large") {
+            font-size: 18px;
+        }
     }
 
     ::placeholder {
@@ -152,6 +229,10 @@ footer {
             background: $btn-hover;
 
             box-shadow: 0px 6px 20px 0px $pink-text;
+        }
+
+        @include media("large") {
+            width: 90px;
         }
     }
 }
