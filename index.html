@@ -36,13 +36,14 @@
         </p>
 
         <div class="email-box">
-          <form action="#">
+          <form action="">
             <div class="form-box">
-              <input type="text" name="email" placeholder="Email Address">
-              <button type="submit">
+              <input type="text" name="email" placeholder="Email Address" id="email-field" onkeyup="emailValidation()">
+              <button type="submit" id="btn">
                 <img class="arrow" src="./images/icon-arrow.svg" alt="Arrow">
               </button>
             </div>
+            <span class="error-msg" id="error-txt"></span>
           </form>
         </div>
 
@@ -56,6 +57,7 @@
   <footer class="attribution">
     <p>Coded by <a href="https://github.com/enimad">Enimad</a> 🐱‍👤</p>
   </footer>
+  <script src="./script.js"></script>
 </body>
 
 </html>

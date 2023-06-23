@@ -495,7 +495,7 @@ footer p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px 0 25px;
+  margin: 15px 0 10px;
   border: solid 2px rgba(206, 151, 151, 0.5);
   height: 50px;
   border-radius: 25px;
@@ -531,6 +531,9 @@ footer p {
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   transition: 0.6s ease;
 }
+.form-box button .arrow {
+  position: absolute;
+}
 .form-box button:hover {
   background: linear-gradient(135deg, #ffe6e6, #ffc7c7);
   box-shadow: 0px 6px 20px 0px #ce9797;
@@ -539,6 +542,25 @@ footer p {
   .form-box button {
     width: 90px;
   }
+}
+.form-box button::before {
+  opacity: var(--error, 0);
+  content: "";
+  background: url(../images/icon-error.svg);
+  width: 24px;
+  height: 24px;
+  position: relative;
+  right: 55px;
+}
+@media (min-width: 1440px) {
+  .form-box button::before {
+    right: 70px;
+  }
+}
+
+.error-msg {
+  margin-left: 20px;
+  color: #f96262;
 }
 
 /*# sourceMappingURL=style.css.map */
