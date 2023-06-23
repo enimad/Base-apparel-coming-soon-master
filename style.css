@@ -546,7 +546,7 @@ footer p {
 .form-box button::before {
   opacity: var(--error, 0);
   content: "";
-  background: url(../images/icon-error.svg);
+  background: url(./images/icon-error.svg);
   width: 24px;
   height: 24px;
   position: relative;
